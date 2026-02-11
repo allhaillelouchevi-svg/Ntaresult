@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Student Login</title>
+
+<style>
+body {
+  font-family: Arial;
+  text-align: center;
+  margin-top: 60px;
+}
+input, button {
+  width: 85%;
+  padding: 12px;
+  margin: 10px;
+  font-size: 16px;
+}
+</style>
+</head>
+
+<body>
+
+<h2>Student Login</h2>
+
+<input id="roll" placeholder="Roll Number">
+<input id="pass" type="password" placeholder="Password">
+<button onclick="login()">Submit</button>
+
+<script>
+function login() {
+  let roll = document.getElementById("roll").value;
+  let pass = document.getElementById("pass").value;
+
+  // 🔴 CHANGE THESE
+  if (roll === "12345" && pass === "pass123") {
+    window.location.href = "result.html";
+  } else {
+    alert("Wrong Roll Number or Password");
+  }
+}
+</script>
+
+</body>
+</html>
