@@ -1,45 +1,104 @@
 <!DOCTYPE html>
 <html>
 <head>
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Student Login</title>
+<title>Candidate Login</title>
 
 <style>
 body {
-  font-family: Arial;
-  text-align: center;
-  margin-top: 60px;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f2f2f2;
 }
-input, button {
-  width: 85%;
+
+.header {
+  background-color: #1f3c68;
+  color: white;
+  padding: 18px;
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.container {
+  background: white;
+  width: 90%;
+  max-width: 420px;
+  margin: 60px auto;
+  padding: 30px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.15);
+  border-radius: 6px;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+input {
+  width: 100%;
   padding: 12px;
-  margin: 10px;
+  margin: 12px 0;
   font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #1f3c68;
+  color: white;
+  border: none;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #2c5aa0;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 14px;
+  color: gray;
 }
 </style>
 </head>
 
 <body>
 
-<h2>Student Login</h2>
+<div class="header">
+Examination Portal 2026 - Session 1
+</div>
 
-<input id="roll" placeholder="Roll Number">
+<div class="container">
+<h2>Only Registered Candidate Login</h2>
+
+<input id="roll" placeholder="Application Number">
 <input id="pass" type="password" placeholder="Password">
-<button onclick="login()">Submit</button>
+
+<button onclick="login()">Log In</button>
+
+<div class="footer">
+Secure Candidate Portal
+</div>
+</div>
 
 <script>
 function login() {
   let roll = document.getElementById("roll").value;
   let pass = document.getElementById("pass").value;
 
-  // 🔴 CHANGE THESE
-  if (roll === "12345" && pass === "pass123") {
+  if (roll === "260310359413" && pass === "Aryan@2007") {
     window.location.href = "result.html";
   } else {
-    alert("Wrong Roll Number or Password");
+    alert("Invalid Application Number or Password");
   }
 }
 </script>
-
 </body>
 </html>
